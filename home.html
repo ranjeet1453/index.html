@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+    
+        menuIcon.addEventListener('click', function() {
+            navbar.classList.toggle('show-menu');
+        });
+    
+        // Close the menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+                navbar.classList.remove('show-menu');
+            }
+        });
+    });
+
+    // 
+    function openTable(){
+        window.location.href="booktable.html";
+    }
+    </script>
+<body>
+    <header>
+        <img src="images/facebook.png" alt="img1">
+        <img src="images/instagram.png" alt="img2">
+        <img src="images/twitter.png" alt="img3">
+        <div class="menu-icon">&#9776;</div>
+<div class="navbar menu-box">
+    <nav class="navbar">
+        <a href="home.html" > Home </a>
+        <a href="specialoffers.html">Special Offer </a>
+        <a href="menu.html">Menu</a> 
+        <a href="aboutus.html" >About Us</a> 
+        <a href="order.html">Order</a> 
+        <a href="account.html" id="svg">
+
+            
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="width: 50px; height:50px; margin-left:1000px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+              
+        </a> 
+         
+        
+    </nav>
+</div>
+        
+   
+    </header>
+              
+    <marquee  width="100%" direction="right"  behavior="alternate" class="navbarright">Place For Foodies</marquee>  
+  
+    <section class="home" id="home">
+        <div class="container">
+            <div class="container2">
+
+                <h2 class="Petpuja">Pet <b>PUJA </b></h2>
+                
+            </div>
+            <br>
+            <div class="container3">
+
+                <input type="button" value="Order Online" id="btn1">
+                <input type="button" value="Book Tables"  id="btn2" onclick="openTable()">
+            </div>
+        </div>
+    </section>
+    <footer>
+       <marquee > @copyright Petpuja</marquee>
+    </footer>
+</body>
+</html>
